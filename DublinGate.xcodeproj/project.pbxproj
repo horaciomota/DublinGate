@@ -17,6 +17,8 @@
 		3D8E9EA52ADDA7E40067DD2E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9EA42ADDA7E40067DD2E /* ApiService.swift */; };
 		3D8E9EA72ADDAD060067DD2E /* DublinGateResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9EA62ADDAD060067DD2E /* DublinGateResults.swift */; };
 		3D8E9EA92ADDAD120067DD2E /* DublinGateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9EA82ADDAD120067DD2E /* DublinGateResponse.swift */; };
+		3D8E9EAB2ADDC78E0067DD2E /* PropretyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9EAA2ADDC78E0067DD2E /* PropretyView.swift */; };
+		3D8E9EAD2ADDCB420067DD2E /* PropretyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9EAC2ADDCB420067DD2E /* PropretyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3D8E9EA42ADDA7E40067DD2E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		3D8E9EA62ADDAD060067DD2E /* DublinGateResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DublinGateResults.swift; sourceTree = "<group>"; };
 		3D8E9EA82ADDAD120067DD2E /* DublinGateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DublinGateResponse.swift; sourceTree = "<group>"; };
+		3D8E9EAA2ADDC78E0067DD2E /* PropretyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropretyView.swift; sourceTree = "<group>"; };
+		3D8E9EAC2ADDCB420067DD2E /* PropretyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropretyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +164,18 @@
 			isa = PBXGroup;
 			children = (
 				3D8E9E772ADDA59B0067DD2E /* ContentView.swift */,
+				3D8E9EAE2ADDCB4D0067DD2E /* PropretyView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3D8E9EAE2ADDCB4D0067DD2E /* PropretyView */ = {
+			isa = PBXGroup;
+			children = (
+				3D8E9EAA2ADDC78E0067DD2E /* PropretyView.swift */,
+				3D8E9EAC2ADDCB420067DD2E /* PropretyViewModel.swift */,
+			);
+			path = PropretyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +312,9 @@
 				3D8E9E762ADDA59B0067DD2E /* DublinGateApp.swift in Sources */,
 				3D8E9EA92ADDAD120067DD2E /* DublinGateResponse.swift in Sources */,
 				3D8E9EA52ADDA7E40067DD2E /* ApiService.swift in Sources */,
+				3D8E9EAD2ADDCB420067DD2E /* PropretyViewModel.swift in Sources */,
 				3D8E9EA72ADDAD060067DD2E /* DublinGateResults.swift in Sources */,
+				3D8E9EAB2ADDC78E0067DD2E /* PropretyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

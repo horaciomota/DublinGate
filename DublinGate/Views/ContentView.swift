@@ -10,11 +10,28 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var dublinResults: [DublinGateResponse] = []
+    
         var body: some View {
             NavigationView {
                 List {
                     ForEach(dublinResults, id: \.id) { result in
-                        Text(result.description ?? "Sem descricao")
+                        Text(String(result.price))
+//                        Text(result.name )
+//                        Text(result.description ?? "Sem descricao")
+
+                        AsyncImage(url: URL(string: result.xl_picture_url ?? "no pic")) { phase in
+                            if let image = phase.image {
+                                    image
+                                        .resizable()
+                                        .scaledToFit()
+                                        .cornerRadius(20)
+                                        .frame(width: 150, height: 200)
+                                        
+                                } else {
+                                    Rectangle()
+                                        .frame(width: 150, height: 200)
+                                        .cornerRadius(20)                }
+                            }
 
                     }
                 }

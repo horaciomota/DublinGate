@@ -17,6 +17,7 @@ struct DublinGateResponse: Codable {
     let description: String?
     let neighborhood_overview: String?
     let notes: String?
+    let xl_picture_url: String? //Main picture of the apartment
     let thumbnail_url: String?
     let thumbnailURL, mediumURL: String?
     let xlPictureURL: String?
