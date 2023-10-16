@@ -14,7 +14,8 @@ struct ContentView: View {
             NavigationView {
                 List {
                     ForEach(dublinResults, id: \.id) { result in
-                        Text(result.name) 
+                        Text(result.description ?? "Sem descricao")
+
                     }
                 }
                 .onAppear {
