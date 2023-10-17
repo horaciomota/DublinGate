@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D8E9E762ADDA59B0067DD2E /* DublinGateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9E752ADDA59B0067DD2E /* DublinGateApp.swift */; };
-		3D8E9E782ADDA59B0067DD2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9E772ADDA59B0067DD2E /* ContentView.swift */; };
+		3D8E9E782ADDA59B0067DD2E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9E772ADDA59B0067DD2E /* HomeView.swift */; };
 		3D8E9E7A2ADDA59F0067DD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8E9E792ADDA59F0067DD2E /* Assets.xcassets */; };
 		3D8E9E7E2ADDA59F0067DD2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8E9E7D2ADDA59F0067DD2E /* Preview Assets.xcassets */; };
 		3D8E9E882ADDA59F0067DD2E /* DublinGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E9E872ADDA59F0067DD2E /* DublinGateTests.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		3D8E9E722ADDA59B0067DD2E /* DublinGate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DublinGate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8E9E752ADDA59B0067DD2E /* DublinGateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DublinGateApp.swift; sourceTree = "<group>"; };
-		3D8E9E772ADDA59B0067DD2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D8E9E772ADDA59B0067DD2E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3D8E9E792ADDA59F0067DD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8E9E7B2ADDA59F0067DD2E /* DublinGate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DublinGate.entitlements; sourceTree = "<group>"; };
 		3D8E9E7D2ADDA59F0067DD2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -167,9 +167,9 @@
 		3D8E9EA22ADDA5E30067DD2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3DDDDDDF2ADF02D2004B127D /* PropretyPage */,
-				3D8E9E772ADDA59B0067DD2E /* ContentView.swift */,
+				3DDDDDE42ADF03D4004B127D /* Home */,
 				3D8E9EAE2ADDCB4D0067DD2E /* PropretyView */,
+				3DDDDDDF2ADF02D2004B127D /* PropretyPage */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +190,14 @@
 				3DDDDDE22ADF030E004B127D /* PropretyPageViewModel.swift */,
 			);
 			path = PropretyPage;
+			sourceTree = "<group>";
+		};
+		3DDDDDE42ADF03D4004B127D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D8E9E772ADDA59B0067DD2E /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8E9E782ADDA59B0067DD2E /* ContentView.swift in Sources */,
+				3D8E9E782ADDA59B0067DD2E /* HomeView.swift in Sources */,
 				3D8E9E762ADDA59B0067DD2E /* DublinGateApp.swift in Sources */,
 				3D8E9EA92ADDAD120067DD2E /* DublinGateResponse.swift in Sources */,
 				3D8E9EA52ADDA7E40067DD2E /* ApiService.swift in Sources */,
