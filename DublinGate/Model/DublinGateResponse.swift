@@ -21,7 +21,7 @@ struct DublinGateResponse: Codable, Identifiable {
     let thumbnail_url: String?
     let thumbnailURL, mediumURL: String?
     let xlPictureURL: String?
-    let price: Int
+    let price: Int?
     
     //HostModel
     let host_name: String?

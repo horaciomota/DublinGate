@@ -13,20 +13,33 @@ struct PropretyView: View {
     var body: some View {
         ScrollView {
             ForEach(vm.dublinResults) { property in
-                LazyVStack(alignment: .leading, spacing: 24) {
+                LazyVStack(alignment: .leading, spacing: 12) {
                     AsyncImage(url: URL(string: property.xl_picture_url ?? "")) { phase in
                         switch phase {
                         case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(20)
-                                .frame(maxWidth: .infinity, idealHeight: 250)
+                            ZStack {
+                                //Card that go bellow pic
+                                Rectangle()
+                                    .foregroundColor(.gray.opacity(0.3))
+                                    .cornerRadius(20)
+                                    .frame(maxWidth: .infinity, idealHeight: 250)
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(20)
+                                    .frame(maxWidth: .infinity, idealHeight: 250)
+                            }
                         case .failure:
-                            ProgressView()
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.gray.opacity(0.3))
+                                    .cornerRadius(20)
+                                    .frame(maxWidth: .infinity, idealHeight: 250)
+                                ProgressView()
+                            }
                         default:
                             Rectangle()
-                                .foregroundColor(.gray)
+                                .foregroundColor(.gray.opacity(0.3))
                                 .cornerRadius(20)
                                 .frame(maxWidth: .infinity, idealHeight: 250)
                         }
@@ -40,11 +53,12 @@ struct PropretyView: View {
                             .font(.system(size: 18, weight: .medium))
                             .foregroundColor(.gray)
                             .fixedSize(horizontal: false, vertical: true)
-                        Text("Price: €\(property.price ) / night")
+                        Text("Price: €\(property.price ?? 0 ) / night")
                             .font(.system(size: 18, weight: .medium))
                             .foregroundColor(.gray)
                             .fixedSize(horizontal: false, vertical: true)
                     }
+                    .padding(.bottom, 8) //Distance between cards
                 }
             }
         }
