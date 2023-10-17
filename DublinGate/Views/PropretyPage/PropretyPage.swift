@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct PropretyPage: View {
+//    let property: DublinGateResponse
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        Text(property.name)
+        Text("Nome da propriedade")
+            .font(.system(size: 18, weight: .bold))
     }
 }
 

@@ -11,7 +11,8 @@ import SwiftUI
 struct DublinGateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .padding(.horizontal)
 
         }
     }
