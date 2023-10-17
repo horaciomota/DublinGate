@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DublinGateResponse: Codable {
+struct DublinGateResponse: Codable, Identifiable {
     
     //Basic Info Model
     let id: String
