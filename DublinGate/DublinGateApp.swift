@@ -13,7 +13,6 @@ struct DublinGateApp: App {
         WindowGroup {
             HomeView()
                 .padding(.horizontal)
-
         }
     }
 }

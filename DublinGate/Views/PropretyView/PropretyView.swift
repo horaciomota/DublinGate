@@ -15,7 +15,7 @@ struct PropretyView: View {
             ScrollView (showsIndicators: false) {
                 LazyVStack(alignment: .leading, spacing: 12) {
                     ForEach(vm.dublinResults, id: \.id) { property in
-                        NavigationLink(destination: PropretyPage()) {
+                        NavigationLink(destination: PropretyPage(property: property)) {
                             VStack(alignment: .leading) {
                                 AsyncImage(url: URL(string: property.xl_picture_url ?? "")) { phase in
                                     switch phase {

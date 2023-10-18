@@ -12,7 +12,7 @@ struct TabBar: View {
        
        var body: some View {
            TabView(selection: $selectedTab) {
-               HomeView()
+               PropretyView()
                    .tabItem {
                        Image(systemName: "house.fill")
                        Text("Home")
