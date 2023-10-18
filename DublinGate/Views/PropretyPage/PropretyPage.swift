@@ -116,7 +116,7 @@ struct PropretyPage: View {
                 HStack {
                     VStack (alignment: .leading) {
                         Text("From $200 (person)")
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.gray)
                         Text("Show all prices!")
                             .font(.system(size: 16, weight: .bold))
@@ -130,7 +130,7 @@ struct PropretyPage: View {
                         .background(Color.pink)
                         .cornerRadius(12)
                         .foregroundColor(.white)
-                        .font(.system(size: 22, weight: .bold))
+                        .font(.system(size: 18, weight: .regular))
                         
 
                 }

@@ -19,7 +19,7 @@ struct TabBar: View {
                    }
                    .tag(0)
                
-               HomeView()
+               SearchView()
                    .tabItem {
                        Image(systemName: "magnifyingglass")
                        Text("Search")
