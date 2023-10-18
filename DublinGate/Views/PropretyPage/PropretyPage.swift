@@ -54,7 +54,7 @@ struct PropretyPage: View {
                     .multilineTextAlignment(.leading)
                     .padding(.bottom, 4)
                 
-                HStack {
+                HStack (spacing: 12) {
                     Image(systemName:"bed.double")
                     Text(String("Beds: \(property.beds ?? 0)"))
                     Image(systemName:"bathtub")
@@ -63,6 +63,47 @@ struct PropretyPage: View {
                     Text("Apt")
                 }
                 .padding(.bottom, 4)
+                
+                HStack {
+                    AsyncImage(url: URL(string: property.host_picture_url ?? "")) { pic in
+                        switch pic {
+                        case .success(let image):
+                            ZStack {
+                                //Card that go bellow pic
+                                Circle()
+                                    .foregroundColor(.gray.opacity(0.3))
+                                    .cornerRadius(30)
+                                    .frame(maxWidth: 50, idealHeight: 50)
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(30)
+                                    .frame(maxWidth: 50, idealHeight: 50)
+                            }
+                        case .failure:
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.gray.opacity(0.3))
+                                    .cornerRadius(30)
+                                    .frame(maxWidth: 50, idealHeight: 50)
+                                ProgressView()
+                            }
+                        default:
+                            Rectangle()
+                                .foregroundColor(.gray.opacity(0.3))
+                                .cornerRadius(30)
+                                .frame(maxWidth: 50, idealHeight: 50)
+                        }
+                    }
+                    .padding(.trailing, 8)
+                    VStack (alignment: .leading) {
+                        Text(property.host_name ?? "Host_Name")
+                        Text("Host since: \(property.host_since ?? "Host_sINCE")")
+                    }
+
+                }
+                .padding(.top, 8)
+                .padding(.bottom, 8)
                 
                 Text(property.space ?? "\(nondescript)")
                     .font(.system(size: 18, weight: .medium))
