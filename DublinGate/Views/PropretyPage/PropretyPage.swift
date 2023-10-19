@@ -55,15 +55,43 @@ struct PropretyPage: View {
                     .padding(.bottom, 4)
                 
                 HStack (spacing: 12) {
-                    Image(systemName:"bed.double")
-                    Text(String("Beds: \(property.beds ?? 0)"))
-                    Image(systemName:"bathtub")
-                    Text(String("bathrooms: \(property.bathrooms ?? 0)"))
-                    Image(systemName:"house")
-                    Text("Apt")
+                    VStack (alignment: .leading) {
+                        HStack {
+                            Image(systemName:"location.circle")
+                                .foregroundColor(.pink)
+                            Text(property.city ?? "")
+                        }
+                        HStack {
+                            Image(systemName:"location.circle")
+                                .foregroundColor(.pink)
+                            Text(String(property.host_response_rate ?? 0))
+                        }
+                    }
+                    Spacer()
+                    VStack (alignment: .leading) {
+                        
+                        Text(String("\(property.beds ?? 0) Beds"))
+                            .padding()
+                            .background(Color.gray.opacity(0.1))
+                            .cornerRadius(22)
+                        Text(String("\(property.bathrooms ?? 0) Bathrooms"))
+                            .padding()
+                            .background(Color.gray.opacity(0.1))
+                            .cornerRadius(22)
+                    
+                    }
+                    VStack (alignment: .leading ,spacing: 8) {
+                        Text(String("\(property.bedrooms ?? 0) Bedrooms"))
+                            .padding()
+                            .background(Color.gray.opacity(0.1))
+                            .cornerRadius(22)
+                    }
                 }
                 .padding(.bottom, 4)
+                .font(.footnote)
+
                 
+                //Host profile
                 HStack {
                     AsyncImage(url: URL(string: property.host_picture_url ?? "")) { pic in
                         switch pic {
@@ -106,7 +134,7 @@ struct PropretyPage: View {
                 .padding(.bottom, 8)
                 
                 Text(property.space ?? "\(nondescript)")
-                    .font(.system(size: 18, weight: .medium))
+                    .font(.system(size: 18, weight: .regular))
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
              
@@ -128,11 +156,11 @@ struct PropretyPage: View {
                     Text("Show Dates")
                         .padding()
                         .background(Color.pink)
-                        .cornerRadius(12)
+                        .cornerRadius(32)
                         .foregroundColor(.white)
                         .font(.system(size: 18, weight: .regular))
-                        
-
+                    
+                    
                 }
                 .padding(.top, 12)
                 .padding(.bottom, 22)
